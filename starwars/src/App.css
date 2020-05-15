@@ -1,8 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Amatic SC', cursive;
 }
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.wrapper {
+  margin: 0% 17% 1% 17%;
+}
+
+h2 {
+  color: #82491EFF;
+}
+
+h2:nth-child(2) {
+  color: inherit;
+}
+
+.list-group-item {
+  margin: 0% 10%;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.list-group-item:last-child {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-bottom: 2%;
+}
+
+#logo {
+  width: 100px;
+}
+
+.innerWrapper {
+  background-color: #F0E14A;
+  border-radius: 10px;
+}
+
+.mainImg {
+  margin: 1% 0% 4% 0%;
+  border-radius: 10px;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+}
