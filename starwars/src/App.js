@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-
+import axios from 'axios'
+import Header from "./components/Header";
+import SearchBar from "./components/SearchBar";
+import Character from './components/Character';
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
