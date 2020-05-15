@@ -8,7 +8,6 @@ import {
     ListGroup, 
     ListGroupItem } from 'reactstrap'
   
-
 export default function Character(props) {
 
  const {rmData, activeIndex, setActiveIndex, animating, setAnimating} = props;
