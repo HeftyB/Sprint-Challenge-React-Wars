@@ -4,6 +4,7 @@ import axios from 'axios'
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import Character from './components/Character';
+
 const App = () => {
 
   const [rmData, setrmData] = useState([]);
@@ -31,7 +32,7 @@ const App = () => {
         <Header/>
         <div className="innerWrapper">
           <SearchBar/>
-          <Character/>
+          <Character rmData={rmData} activeIndex={activeIndex} setActiveIndex={setActiveIndex} animating={animating} setAnimating={setAnimating}/>
         </div>
       </div>
     </div>
