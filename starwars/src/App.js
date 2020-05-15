@@ -5,18 +5,38 @@ import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import Character from './components/Character';
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
 
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+  const [rmData, setrmData] = useState([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+  
+  const getData = () => {
+    axios.get("https://rickandmortyapi.com/api/character/")
+    .then( data => {
+      setrmData(data.data.results)
+    })
+
+    .catch( error => {
+      console.log(error);
+      debugger
+    })
+  }
+
+  useEffect(() => { getData() },[]);
+
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <div className="wrapper">
+        <Header/>
+        <div className="innerWrapper">
+          <SearchBar/>
+          <Character/>
+        </div>
+      </div>
     </div>
   );
+
 }
 
 export default App;
